@@ -1,0 +1,85 @@
+/* --- Main Container Section --- */
+.how-container {
+  /* Centers all text content (titles and descriptions) horizontally */
+  text-align: center;
+  
+  /* Adds spacing: 60px top/bottom and 20px left/right */
+  padding: 60px 20px;
+}
+
+/* --- Main Section Heading --- */
+.how-title {
+  font-size: 34px;
+  
+  /* 800 is Extra Bold for strong emphasis */
+  font-weight: 800; 
+  
+  /* Pushes the content grid down by 50px */
+  margin-bottom: 50px;
+}
+
+/* --- Flexbox Grid for Steps --- */
+.how-grid {
+  /* Enables flexible layout */
+  display: flex;
+  
+  /* Centers the items horizontally in the container */
+  justify-content: center;
+  
+  /* Adds 70px of empty space between flex items */
+  gap: 70px;
+  
+  /* Essential for responsiveness: moves items to the next line 
+     if there isn't enough screen width */
+  flex-wrap: wrap;
+}
+
+/* --- Individual Step Wrapper --- */
+.how-item {
+  /* Restricts width so text lines don't get too long and hard to read */
+  max-width: 230px;
+}
+
+/* --- Circular Icon Background --- */
+.how-icon {
+  width: 110px;
+  height: 110px;
+  
+  /* Makes the square div a perfect circle */
+  border-radius: 50%;
+  
+  /* Flexbox used here to center the emoji INSIDE the circle */
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  
+  /* Centers the circle itself relative to its parent and adds bottom spacing */
+  margin: 0 auto 20px;
+  
+  /* Adds a soft shadow for a 3D "floating" effect */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- The Emoji/Icon Text --- */
+.emoji {
+  /* Sets the size of the icon inside the circle */
+  font-size: 48px;
+}
+
+/* --- Step Title (e.g., "Order", "Delivery") --- */
+.how-step-title {
+  font-size: 20px;
+  font-weight: 700; /* Bold */
+  margin-bottom: 10px; /* Small gap between title and description */
+}
+
+/* --- Step Description Text --- */
+.how-desc {
+  /* Uses a lighter gray to create visual hierarchy (less dominant than title) */
+  color: #777;
+  
+  font-size: 15px;
+  
+  /* Increases space between lines for better readability */
+  line-height: 1.5;
+}

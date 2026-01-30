@@ -1,0 +1,52 @@
+/* Home.css */
+
+/* Main container for the restaurant card.
+   Sets up the initial state for the "entrance" animation 
+   so cards slide up and fade in when the page loads.
+*/
+.restaurant-card {
+  opacity: 0; /* Start invisible */
+  transform: translateY(25px); /* Start 25px lower than final position */
+  animation: fadeUp 0.8s ease-out forwards; /* Run the fadeUp animation once */
+  will-change: transform, opacity; /* Performance optimization for the browser */
+}
+
+/* Keyframes for the entrance animation.
+    transitions the element from hidden/low to visible/original position.
+*/
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Targeting the specific inner .card element within the wrapper.
+   Adds a smooth transition for when the user hovers over it.
+*/
+.restaurant-card .card {
+  transition: all 0.3s ease; 
+}
+
+/* Hover effect for the restaurant card.
+   Scales the card up slightly and adds a deeper shadow to simulate lifting.
+*/
+.restaurant-card:hover .card {
+  transform: scale(1.05) translateY(-5px); /* Zoom in 5% and move up 5px */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+}
+
+/* A reusable utility class for adding hover effects to other elements 
+   (independent of the restaurant-card structure).
+*/
+.hover-shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* The active hover state for the utility class.
+   Similar lifting and scaling effect as the restaurant card.
+*/
+.hover-shadow:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
